@@ -3,20 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Магазин Косметики</title>
-    <style> body { font-family: Arial, sans-serif; background-color: #f5f7fa; /* светло-голубой фон */ color: #333; } .header { display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #007bff; /* темно-синий цвет */ color: white; } .logo { font-size: 24px; font-weight: bold; } .buttons { display: flex; gap: 10px; } button { border: none; background-color: transparent; color: white; cursor: pointer; transition: all 0.2s ease-in-out; } button:hover { text-decoration: underline; } .search-input { width: 200px; height: 30px; margin-left: auto; padding: 5px; border-radius: 4px; outline: none; border: 1px solid #ddd; } .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px; padding: 20px; } .product { background-color: white; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); border-radius: 4px; overflow: hidden; max-width: 300px; margin: 0 auto; } .product-image { width: 100%; height: 250px; object-fit: cover; } .product-info { padding: 10px; } .product-title { font-size: 18px; font-weight: bold; margin-bottom: 5px; } .product-price { font-size: 16px; color: #666; } .add-to-cart-button { width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; margin-top: 10px; transition: all 0.2s ease-in-out; } .add-to-cart-button:hover { background-color: #0056b3; } </style>
+    <title>BeautyCosmetic By Faberlic</title>
+    <style> body { font-family: Arial, sans-serif; background-color: #f5f7fa; /* светло-голубой фон */ color: #333; } .header { display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #007bff; /* темно-синий цвет */ color: white; } .logo { font-size: 24px; font-weight: bold; text-align: center; width: 100%; } .categories { display: flex; justify-content: center; align-items: center; background-color: #007bff; color: white; margin-top: 10px; padding: 10px 0; } .category { position: relative; padding: 0 20px; cursor: pointer; } .subcategories { display: none; position: absolute; top: 35px; left: 50%; transform: translateX(-50%); background-color: white; padding: 10px; border: 1px solid #ddd; z-index: 1; } .subcategories a { display: block; color: black; text-decoration: none; padding: 5px 0; } .subcategories a:hover { text-decoration: underline; } .category:hover .subcategories { display: block; } .search-input { width: 200px; height: 30px; margin-left: auto; padding: 5px; border-radius: 4px; outline: none; border: 1px solid #ddd; } .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px; padding: 20px; } .product { background-color: white; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); border-radius: 4px; overflow: hidden; max-width: 300px; margin: 0 auto; } .product-image { width: 100%; height: 250px; object-fit: cover; } .product-info { padding: 10px; } .product-title { font-size: 18px; font-weight: bold; margin-bottom: 5px; } .product-price { font-size: 16px; color: #666; } .add-to-cart-button { width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; margin-top: 10px; transition: all 0.2s ease-in-out; } .add-to-cart-button:hover { background-color: #0056b3; } </style>
 </head>
 <body>
     <!-- Заголовок -->
     <div class="header">
-        <h1 class="logo">Косметика</h1>
-        <div class="buttons">
-            <button>Поиск товара</button>
-            <button>Избранное</button>
-            <button>Корзина</button>
+        <h1 class="logo">BeautyCosmetic By Faberlic</h1>
+    </div>
+
+    <!-- Категории -->
+    <div class="categories">
+        <div class="category">НОВИНКИ
+            <div class="subcategories">
+                <a href="#">Подкатегория 1</a>
+                <a href="#">Подкатегория 2</a>
+                <a href="#">Подкатегория 3</a>
+            </div>
+        </div>
+        <div class="category">КОСМЕТИКА
+            <div class="subcategories">
+                <a href="#">Подкатегория 1</a>
+                <a href="#">Подкатегория 2</a>
+                <a href="#">Подкатегория 3</a>
+            </div>
+        </div>
+        <div class="category">МАКИЯЖ
+            <div class="subcategories">
+                <a href="#">Подкатегория 1</a>
+                <a href="#">Подкатегория 2</a>
+                <a href="#">Подкатегория 3</a>
+            </div>
+        </div>
+        <div class="category">ПАРФЮМЕРИЯ
+            <div class="subcategories">
+                <a href="#">Подкатегория 1</a>
+                <a href="#">Подкатегория 2</a>
+                <a href="#">Подкатегория 3</a>
+            </div>
+        </div>
+        <div class="category">ОДЕЖДА И АКСЕССУАРЫ
+            <div class="subcategories">
+                <a href="#">Подкатегория 1</a>
+                <a href="#">Подкатегория 2</a>
+                <a href="#">Подкатегория 3</a>
+            </div>
+        </div>
+        <div class="category">ЗДОРОВЬЕ
+            <div class="subcategories">
+                <a href="#">Подкатегория 1</a>
+                <a href="#">Подкатегория 2</a>
+                <a href="#">Подкатегория 3</a>
+            </div>
+        </div>
+        <div class="category">ДОМ
+            <div class="subcategories">
+                <a href="#">Подкатегория 1</a>
+                <a href="#">Подкатегория 2</a>
+                <a href="#">Подкатегория 3</a>
+            </div>
         </div>
     </div>
-    
+
     <!-- Поиск -->
     <input type="text" placeholder="Найти товар..." class="search-input">
 
