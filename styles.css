@@ -1,8 +1,48 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #87CEEB, #4682B4, #1E3C72); /* Небесно-голубой → Темно-синий */
-    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0033cc, #66ccff);
     color: white;
     text-align: center;
 }
+
+header {
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+main {
+    padding: 20px;
+}
+
