@@ -71,16 +71,44 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-#search-sticker {
-    position: absolute;
-    top: 60px;
-    right: 20px;
+#search-container {
+    position: relative;
+    float: right;
+    margin-top: 55px;
+    margin-right: 20px;
+}
+
+#search-icon {
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 
-#search-sticker img {
-    width: 50px;
-    height: 50px;
+#search-form {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+#search-form input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+#search-form button {
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 #cart-section {
