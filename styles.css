@@ -42,3 +42,38 @@ header {
     display: none;
     position: absolute;
     left:
+/* Стили для мегаменю */
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Чтобы меню было ниже главного */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Колонки в мегаменю */
+.mega-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.mega-column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.mega-column a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.mega-column a:hover {
+    text-decoration: underline;
+}
