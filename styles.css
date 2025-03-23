@@ -24,7 +24,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px; /* Увеличенное расстояние до категорий */
+    margin-top: 60px; /* Увеличенное расстояние до категорий */
 }
 
 nav ul {
