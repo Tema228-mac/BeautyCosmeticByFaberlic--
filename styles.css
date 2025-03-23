@@ -20,6 +20,12 @@ header h1 {
     margin-bottom: 10px;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -42,14 +48,21 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-#search-sticker {
-    position: absolute;
-    top: 60px;
-    right: 20px;
+#right-sidebar {
+    display: flex;
+    align-items: center;
+}
+
+#search-sticker,
+#favorites-sticker,
+#cart-sticker {
+    margin-left: 20px;
     cursor: pointer;
 }
 
-#search-sticker img {
+#search-sticker img,
+#favorites-sticker img,
+#cart-sticker img {
     width: 50px;
     height: 50px;
 }
