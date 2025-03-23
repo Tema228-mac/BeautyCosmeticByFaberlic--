@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const categoriesList = document.querySelector('#categories');
     const subCategoriesSection = document.querySelector('#sub-categories');
+    const searchIcon = document.querySelector('#search-icon');
     const searchForm = document.querySelector('#search-form');
     const searchInput = document.querySelector('#search-input');
     const searchResults = document.querySelector('#search-results');
@@ -40,6 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         subCategoriesSection.appendChild(ul);
     }
+
+    // Показать форму поиска при клике на иконку
+    searchIcon.addEventListener('click', () => {
+        searchForm.style.display = searchForm.style.display === 'none' ? 'block' : 'none';
+    });
 
     // Обработчик события поиска
     searchForm.addEventListener('submit', e => {
