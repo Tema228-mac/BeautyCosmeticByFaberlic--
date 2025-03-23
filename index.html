@@ -7,27 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">BeautyCosmetic By Faberlic</div>
-    <nav class="nav">
-        <a href="#">Новинки</a>
-        <a href="#">Косметика</a>
-        
-        <!-- Категория с подменю -->
-        <div class="nav-item">
-            <a href="#">Макияж</a>
-            <div class="submenu">
-                <b>Глаза</b>
-                <a href="#">Карандаш</a>
-                <a href="#">Подводка</a>
-                <a href="#">Тени для век</a>
-                <a href="#">Тушь для ресниц</a>
-            </div>
-        </div>
-
-        <a href="#">Парфюмерия</a>
-        <a href="#">Одежда</a>
-        <a href="#">Здоровье</a>
-        <a href="#">Дом</a>
+    <header>
+        <h1>BeautyCosmetic By Faberlic</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Новинки</a></li>
+            <li><a href="#">Косметика</a></li>
+            <li class="dropdown">
+                <a href="#">Макияж</a>
+                <ul class="submenu">
+                    <li><strong>Глаза</strong></li>
+                    <li>Карандаши, подводка</li>
+                    <li>Тени для век</li>
+                    <li>Тушь для ресниц</li>
+                </ul>
+            </li>
+            <li><a href="#">Парфюмерия</a></li>
+            <li><a href="#">Одежда</a></li>
+            <li><a href="#">Здоровье</a></li>
+            <li><a href="#">Дом</a></li>
+        </ul>
     </nav>
+    <main>
+        <h2>Добро пожаловать в BeautyCosmetic!</h2>
+        <p>Выбирайте лучшие товары для красоты и ухода.</p>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
