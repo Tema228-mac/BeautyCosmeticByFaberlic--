@@ -24,7 +24,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px; /* Увеличенное расстояние до категорий */
 }
 
 nav ul {
@@ -52,6 +52,9 @@ nav ul li a:hover {
 #right-sidebar {
     display: flex;
     align-items: center;
+    position: absolute; /* Зафиксируем блок справа */
+    top: 20px;
+    right: 20px;
 }
 
 #search-sticker,
