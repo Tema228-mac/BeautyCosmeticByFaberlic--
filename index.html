@@ -1,114 +1,46 @@
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters, CallbackQueryHandler
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyCosmetic By Faberlic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BeautyCosmetic By Faberlic</h1>
+        <nav>
+            <ul id="categories">
+                <li><a href="#" onclick="showSubCategories('Новинки')">Новинки</a></li>
+                <li><a href="#" onclick="showSubCategories('Уход')">Уход</a></li>
+                <li><a href="#" onclick="showSubCategories('Макияж')">Макияж</a></li>
+                <li><a href="#" onclick="showSubCategories('Парфюмерия')">Парфюмерия</a></li>
+                <li><a href="#" onclick="showSubCategories('Мода')">Мода</a></li>
+                <li><a href="#" onclick="showSubCategories('Здоровье')">Здоровье</a></li>
+                <li><a href="#" onclick="showSubCategories('Дом')">Дом</a></li>
+                <li><a href="#" onclick="showSubCategories('Детям')">Детям</a></li>
+                <li><a href="#" onclick="showSubCategories('Акции')">Акции</a></li>
+            </ul>
+        </nav>
+    </header>
 
-# Токен вашего бота
-TOKEN = 'YOUR_BOT_TOKEN'
+    <section id="sub-categories"></section>
 
-# Категории товаров
-CATEGORIES = {
-    'Новинки': [],
-    'Уход': ['Лицо', 'Тело', 'Волосы'],
-    'Макияж': [],
-    'Парфюмерия': [],
-    'Мода': [],
-    'Здоровье': [],
-    'Дом': [],
-    'Детям': [],
-    'Акции': []
-}
+    <section id="search-section">
+        <form id="search-form">
+            <label for="search-input">Поиск:</label>
+            <input type="text" id="search-input" placeholder="Введите название продукта">
+            <button type="submit">Искать</button>
+        </form>
+        <div id="search-results"></div>
+    </section>
 
-# Подкатегории ухода
-SUB_CATEGORIES_UHOOD = {
-    'Лицо': [
-        'Гаджеты и аксессуары',
-        'Глубокое очищение',
-        'Для зоны вокруг глаз',
-        'Защита от солнца',
-        'Кремы дневные',
-        'Кремы ночные',
-        'Маски',
-        'Очищение и демакияж',
-        'Сыворотки',
-        'Уход за губами'
-    ],
-    'Тело': [
-        'Гаджеты и аксессуары',
-        'Дезодоранты',
-        'Для душа и ванны',
-        'Защита от солнца',
-        'Коррекция фигуры',
-        'Средства для депиляции/бритья',
-        'Средства после депиляции/бритья',
-        'Уход за ногами',
-        'Уход за руками',
-        'Уход за телом'
-    ],
-    'Волосы': [
-        'Аксессуары',
-        'Бальзамы, маски',
-        'Краски для волос',
-        'Окрашивание',
-        'Осветлитель для волос',
-        'Специальный уход',
-        'Средства для укладки',
-        'Шампуни'
-    ]
-}
+    <section id="cart-section">
+        <h2>Корзина</h2>
+        <div id="cart-items"></div>
+        <button id="clear-cart">Очистить корзину</button>
+    </section>
 
-def start(update: Update, context: CallbackContext):
-    """Отправляет приветственное сообщение и меню категорий."""
-    update.message.reply_text('Добро пожаловать в BeautyCosmetic By Faberlic!')
-    
-    keyboard = [[InlineKeyboardButton(text=category, callback_data=f'category_{category}') for category in CATEGORIES]]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text('Выберите категорию:', reply_markup=reply_markup)
-
-def category_callback(update: Update, context: CallbackContext):
-    """Обрабатывает выбор категории пользователем."""
-    query = update.callback_query
-    query.answer()
-    
-    selected_category = query.data.split('_')[1]
-    
-    if selected_category == 'Уход':
-        sub_categories = SUB_CATEGORIES_UHOOD.keys()
-        keyboard = [[InlineKeyboardButton(text=sub_category, callback_data=f'subcategory_{sub_category}_{selected_category}') for sub_category in sub_categories]]
-        reply_markup = InlineKeyboardMarkup(keyboard)
-        query.edit_message_text(f'Вы выбрали категорию {selected_category}. Выберите подкатегорию:', reply_markup=reply_markup)
-    else:
-        # Здесь можно добавить логику для других категорий
-        pass
-
-def subcategory_callback(update: Update, context: CallbackContext):
-    """Обрабатывает выбор подкатегории пользователем."""
-    query = update.callback_query
-    query.answer()
-    
-    data = query.data.split('_')
-    sub_category = data[1]
-    category = data[2]
-    
-    if category == 'Уход':
-        products = SUB_CATEGORIES_UHOOD.get(sub_category, [])
-        text = f'Вы выбрали подкатегорию {sub_category} в категории {category}.\nДоступные продукты:\n'
-        for product in products:
-            text += f'- {product}\n'
-        
-        query.edit_message_text(text)
-    else:
-        # Здесь можно добавить логику для других категорий
-        pass
-
-def main():
-    updater = Updater(TOKEN, use_context=True)
-    dp = updater.dispatcher
-    
-    dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CallbackQueryHandler(category_callback, pattern='^category_'))
-    dp.add_handler(CallbackQueryHandler(subcategory_callback, pattern='^subcategory_'))
-    
-    updater.start_polling()
-    updater.idle()
-
-if __name__ == '__main__':
-    main()
+    <script src="script.js"></script>
+</body>
+</html>
