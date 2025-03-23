@@ -21,8 +21,14 @@
                 <li><a href="#" onclick="showSubCategories('Детям')">Детям</a></li>
                 <li><a href="#" onclick="showSubCategories('Акции')">Акции</a></li>
             </ul>
-            <!-- Лупа для поиска -->
-            <a href="search.html" id="search-sticker"><img src="images/loupe.png" alt="Поиск" title="Поиск"></a>
+            <!-- Иконка поиска -->
+            <div id="search-container">
+                <img src="images/loupe.png" alt="Поиск" title="Поиск" id="search-icon">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Введите название продукта">
+                    <button type="submit">Искать</button>
+                </form>
+            </div>
         </nav>
     </header>
 
