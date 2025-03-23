@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const categoriesList = document.querySelector('#categories');
     const subCategoriesSection = document.querySelector('#sub-categories');
+    const searchForm = document.querySelector('#search-form');
+    const searchInput = document.querySelector('#search-input');
+    const searchResults = document.querySelector('#search-results');
     const cartItems = document.querySelector('#cart-items');
     const clearCartBtn = document.querySelector('#clear-cart');
 
@@ -37,6 +40,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         subCategoriesSection.appendChild(ul);
     }
+
+    // Обработчик события поиска
+    searchForm.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const query = searchInput.value.trim().toLowerCase();
+
+        if (!query) {
+            alert('Пожалуйста, введите название продукта.');
+            return;
+        }
+
+        searchResults.innerHTML = '<p>Идет поиск...</p>';
+
+        // Здесь можно добавить AJAX-запрос для получения результатов поиска
+        setTimeout(() => {
+            searchResults.innerHTML = `
+                <ul>
+                    <li>Результат 1</li>
+                    <li>Результат 2</li>
+                    <li>Результат 3</li>
+                </ul>
+            `;
+        }, 1000); // Имитация задержки
+    });
 
     // Обработка добавления товаров в корзину
     cartItems.addEventListener('click', e => {
