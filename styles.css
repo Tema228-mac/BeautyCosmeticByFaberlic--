@@ -22,7 +22,7 @@ header h1 {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -51,6 +51,9 @@ nav ul li a:hover {
 #right-sidebar {
     display: flex;
     align-items: center;
+    position: absolute; /* Зафиксируем блок справа */
+    top: 20px;
+    right: 20px;
 }
 
 #search-sticker,
