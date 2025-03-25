@@ -20,42 +20,67 @@ header h1 {
     margin-bottom: 10px;
 }
 
-#search-section {
-    margin-top: 40px; /* Отступ от верхнего края */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px; /* Отступ от шапки */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#right-sidebar {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Зафиксируем блок справа */
+    top: 20px;
+    right: 20px;
+}
+
+#search-sticker,
+#favorites-sticker,
+#cart-sticker {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#search-sticker img,
+#favorites-sticker img,
+#cart-sticker img {
+    width: 50px;
+    height: 50px;
+}
+
+#cart-section {
+    margin-top: 40px;
     text-align: center;
 }
 
-#search-form {
-    display: inline-block;
-}
-
-#search-form label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-#search-form input {
-    padding: 10px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    width: 300px;
-}
-
-#search-form button {
-    padding: 10px 20px;
-    background-color: darkblue;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-#search-results {
+#cart-items {
     margin-top: 20px;
 }
 
-#search-results ul {
+#cart-items ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +88,7 @@ header h1 {
     gap: 20px;
 }
 
-#search-results ul li {
+#cart-items ul li {
     width: 150px;
     text-align: center;
     border: 1px solid white;
