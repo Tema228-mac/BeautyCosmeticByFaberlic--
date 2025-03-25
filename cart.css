@@ -1,0 +1,37 @@
+/* cart.css */
+
+#cart-products {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#cart-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cart-product {
+    width: 150px;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#cart-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#empty-cart,
+#checkout {
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
