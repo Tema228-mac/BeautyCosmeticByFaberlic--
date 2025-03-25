@@ -22,9 +22,8 @@ header h1 {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 60px; /* Отступ от шапки */
 }
 
 nav ul {
@@ -52,9 +51,6 @@ nav ul li a:hover {
 #right-sidebar {
     display: flex;
     align-items: center;
-    position: absolute; /* Зафиксируем блок справа */
-    top: 20px;
-    right: 20px;
 }
 
 #search-sticker,
@@ -94,4 +90,49 @@ nav ul li a:hover {
     border: 1px solid white;
     padding: 10px;
     border-radius: 5px;
+}
+
+.subcategories {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.subcategories li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.subcategories li strong {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.sub-subcategories {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    left: 100%;
+    top: 0;
+}
+
+.sub-subcategories li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.subcategories li:hover .sub-subcategories {
+    display: block;
+}
+
+nav ul li:hover .subcategories {
+    display: block;
 }
