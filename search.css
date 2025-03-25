@@ -1,0 +1,52 @@
+/* search.css */
+
+#search-section {
+    margin-top: 40px; /* Отступ от верхнего края */
+    text-align: center;
+}
+
+#search-form {
+    display: inline-block;
+}
+
+#search-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#search-form input {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#search-form button {
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#search-results {
+    margin-top: 20px;
+}
+
+#search-results ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#search-results ul li {
+    width: 150px;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
