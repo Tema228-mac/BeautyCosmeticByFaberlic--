@@ -9,36 +9,132 @@
 <body>
     <header>
         <h1>BeautyCosmetic By Faberlic</h1>
-        <!-- Блок с поиском, избранным и корзиной -->
-        <div id="right-sidebar">
-            <!-- Иконка поиска -->
-            <a href="search.html" id="search-sticker">
-                <img src="images/loupe.png" alt="Поиск" title="Поиск">
-            </a>
-            <!-- Избранное -->
-            <a href="favorites.html" id="favorites-sticker">
-                <img src="images/favorite.png" alt="Избранное" title="Избранное">
-            </a>
-            <!-- Корзина -->
-            <a href="cart.html" id="cart-sticker">
-                <img src="images/cart.png" alt="Корзина" title="Корзина">
-            </a>
-        </div>
+        <nav>
+            <ul id="categories">
+                <li><a href="#">Новинки</a></li>
+                <li><a href="#">Уход</a>
+                    <ul class="subcategories">
+                        <li><strong>Лицо</strong>
+                            <ul class="sub-subcategories">
+                                <li>Гаджеты и аксессуары</li>
+                                <li>Глубокое очищение</li>
+                                <li>Для зоны вокруг глаз</li>
+                                <li>Защита от солнца</li>
+                                <li>Кремы дневные</li>
+                                <li>Кремы ночные</li>
+                                <li>Маски</li>
+                                <li>Очищение и демакияж</li>
+                                <li>Сыворотки</li>
+                                <li>Уход за губами</li>
+                            </ul>
+                        </li>
+                        <li><strong>Тело</strong>
+                            <ul class="sub-subcategories">
+                                <li>Гаджеты и аксессуары</li>
+                                <li>Дезодоранты</li>
+                                <li>Для душа и ванны</li>
+                                <li>Защита от солнца</li>
+                                <li>Коррекция фигуры</li>
+                                <li>Средства для депиляции/бритья</li>
+                                <li>Средства после депиляции/бритья</li>
+                                <li>Уход за ногами</li>
+                                <li>Уход за руками</li>
+                                <li>Уход за телом</li>
+                            </ul>
+                        </li>
+                        <li><strong>Волосы</strong>
+                            <ul class="sub-subcategories">
+                                <li>Аксессуары</li>
+                                <li>Бальзамы, маски</li>
+                                <li>Краски для волос</li>
+                                <li>Окрашивание</li>
+                                <li>Осветлитель для волос</li>
+                                <li>Специальный уход</li>
+                                <li>Средства для укладки</li>
+                                <li>Шампуни</li>
+                            </ul>
+                        </li>
+                        <li><strong>Окрашивание</strong>
+                            <ul class="sub-subcategories">
+                                <li>Аксессуары для окрашивания</li>
+                                <li>Краски для волос</li>
+                                <li>Осветлитель для волос</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ароматерапия</strong>
+                            <ul class="sub-subcategories">
+                                <li>Аромамасла</li>
+                                <li>Диффузоры</li>
+                                <li>Спреи</li>
+                            </ul>
+                        </li>
+                        <li><strong>Гигиена</strong>
+                            <ul class="sub-subcategories">
+                                <li>Дезодоранты</li>
+                                <li>Для душа и ванны</li>
+                                <li>Интимная гигиена</li>
+                                <li>Туалетная бумага</li>
+                            </ul>
+                        </li>
+                        <li><strong>Гигиена полости рта</strong>
+                            <ul class="sub-subcategories">
+                                <li>Зубные пасты</li>
+                                <li>Зубные щетки</li>
+                                <li>Ополаскиватели</li>
+                                <li>Специальные средства</li>
+                            </ul>
+                        </li>
+                        <li><strong>Детям</strong>
+                            <ul class="sub-subcategories">
+                                <li>Бальзамы для губ</li>
+                                <li>Гигиена</li>
+                                <li>Уход за волосами</li>
+                                <li>Уход за кожей</li>
+                            </ul>
+                        </li>
+                        <li><strong>Космецевтика</strong>
+                            <ul class="sub-subcategories">
+                                <li>Антиакне</li>
+                                <li>Домашняя аптечка</li>
+                                <li>Менопауза</li>
+                                <li>Уход за ногами</li>
+                            </ul>
+                        </li>
+                        <li><strong>Мужчинам</strong>
+                            <ul class="sub-subcategories">
+                                <li>Гигиена и уход за волосами</li>
+                                <li>Дезодоранты</li>
+                                <li>Для и после бритья</li>
+                                <li>Уход за лицом</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Макияж</a></li>
+                <li><a href="#">Парфюмерия</a></li>
+                <li><a href="#">Мода</a></li>
+                <li><a href="#">Здоровье</a></li>
+                <li><a href="#">Дом</a></li>
+                <li><a href="#">Детям</a></li>
+                <li><a href="#">Акции</a></li>
+            </ul>
+            <!-- Блок с поиском, избранным и корзиной -->
+            <div id="right-sidebar">
+                <!-- Иконка поиска -->
+                <a href="search.html" id="search-sticker">
+                    <img src="images/loupe.png" alt="Поиск" title="Поиск">
+                </a>
+                <!-- Избранное -->
+                <a href="favorites.html" id="favorites-sticker">
+                    <img src="images/favorite.png" alt="Избранное" title="Избранное">
+                </a>
+                <!-- Корзина -->
+                <a href="cart.html" id="cart-sticker">
+                    <img src="images/cart.png" alt="Корзина" title="Корзина">
+                </a>
+            </div>
+        </nav>
     </header>
-
-    <nav>
-        <ul id="categories">
-            <li><a href="#">Новинки</a></li>
-            <li><a href="#">Уход</a></li>
-            <li><a href="#">Макияж</a></li>
-            <li><a href="#">Парфюмерия</a></li>
-            <li><a href="#">Мода</a></li>
-            <li><a href="#">Здоровье</a></li>
-            <li><a href="#">Дом</a></li>
-            <li><a href="#">Детям</a></li>
-            <li><a href="#">Акции</a></li>
-        </ul>
-    </nav>
 
     <section id="sub-categories"></section>
 
