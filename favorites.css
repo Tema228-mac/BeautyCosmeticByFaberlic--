@@ -1,0 +1,41 @@
+/* favorites.css */
+
+#favorite-products {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#favorite-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.favorite-product {
+    width: 150px;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#recently-viewed {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#viewed-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.viewed-product {
+    width: 150px;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
